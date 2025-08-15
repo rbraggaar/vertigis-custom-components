@@ -1,0 +1,64 @@
+<layout xmlns="https://geocortex.com/layout/v1" id="layout-7ca99d2f">
+    <dialog id="dialog-781bca4a" config="a92137f5-725c-4489-9647-8144e18cb1c5">
+        <text id="text-adb46530" config="c9bbdd0d-d0ab-4df7-b21e-df2713a4639a" active="true"/>
+    </dialog>
+    <split id="split-5fdbaa1d" config="7e7dd8d2-8905-4e0e-bc94-69ae494e7e5e" resizable="true">
+        <stack id="stack-07738388" config="165caf5c-d079-4e86-b949-f3c9dbe8169b">
+            <geofacta xmlns="geofacta.gxw.topbar" id="geofacta-b001eea4" config="7a3fda9a-99d9-466b-88ab-a029d673a3ed"/>
+            <split id="split-40a4cf58" config="a8ee5a10-8e11-4a4c-9b0d-48660c342291" resizable="true">
+                <stack id="stack-6ab7ecb0" config="701ec009-f37d-4b25-946b-b579df489d03" resizable="true" grow="70">
+                    <map id="map-4e8f424a" config="683048f7-4270-4bb4-8999-d2e63de20015">
+                        <split id="split-f87e710b" config="77b9fd77-d498-4759-8251-d1817d94fe68" slot="top-start">
+                            <expand id="expand-9667afaa" config="fbbd002e-b41f-447f-a934-bce3e19411c7" show-title="false" slot="top-start" size="small" margin="0.2857142857142857" style="square">
+                                <toolbar id="toolbar-d373f695" config="1e5735f6-1b96-45c1-b302-e41d8bdf2070" orientation="vertical" slot="top-start" show-icons="true"/>
+                                <user id="user-61399807" config="15494e06-4d59-4da2-8a86-280aae81ea71" margin="0.42857142857142855" size="large"/>
+                                <stack id="stack-835a2169" config="29522113-6e2a-4253-aac5-f14618c771e9"/>
+                            </expand>
+                            <search id="search-d71950a4" config="b2123906-a2a9-49f9-8cb7-7f6f7f52d0d6" slot="top-start"/>
+                        </split>
+                        <expand id="expand-19fe4f11" config="b7f04cb6-b635-4bf1-8ae4-fa73e8013383" show-title="true" style="square">
+                            <toolbar id="toolbar-417e5d56" config="f760dbbd-c92e-4533-9813-ef7de0622943" orientation="vertical"/>
+                            <expand id="expand-ba5e65f8" config="fb6b49c6-12f8-4de9-97e3-48276ee885d9">
+                                <geometry-toolbar xmlns="https://geocortex.com/layout/web/v1" id="geometry-toolbar-72724e75" config="26e231ad-68de-4e4f-b3aa-63383c864b62" active="false"/>
+                            </expand>
+                        </expand>
+                        <expand id="expand-6cd1a671" config="767b4ba1-bef7-45aa-b0e4-a2b1ca43a1e2" slot="bottom-end" show-title="true" style="square">
+                            <basemap-picker id="basemap-picker-e548bd68" config="d2c03168-aed2-42cb-904a-5e4d6dc75384" slot="bottom-end"/>
+                        </expand>
+                        <scalebar id="scalebar-bd051aea" config="2fc56289-b738-4ea7-adbc-23354cfd75df" slot="bottom-start"/>
+                        <compass id="compass-34d829fc" config="53bd72e5-dce2-4f33-a269-3ffc187a3157" slot="bottom-start" active="true"/>
+                    </map>
+                    <panel id="panel-22de095a" config="d05703da-99f7-487e-b7a5-80be591bb3bf" active="false" visual-state="normal" show-back-button="false" show-title="true">
+                        <results-table xmlns="https://geocortex.com/layout/web/v1" id="results-table-27f76f24" config="b5bb2bd5-bb69-4e12-9cbb-e16279680d6b" active="false"/>
+                        <streetsmartcomponent xmlns="custom.ef2537f9" id="streetsmartcomponent-1daf56f8" config="2826a9cc-edf1-408b-b0ef-8ede54c68fa4" models="#map-4e8f424a" active="false"/>
+                    </panel>
+                </stack>
+                <panel id="panel-efd4ae5b" config="26a3b9c4-7eac-4358-b43e-8ace3a36a7b5" slot="top-start" show-title="false" show-popout-button="false" show-back-button="false" show-close-button="false" show-maximize-button="false" grow="30">
+                    <stack id="stack-931b2ddf" config="7733eae0-34d3-461b-9272-5eef2ef78ce9" valign="start" halign="start">
+                        <tabs xmlns="https://geocortex.com/layout/web/v1" id="tabs-07f48898" config="d7f76af7-0b34-4d59-ab20-5b9c5db3b9e4" show-icon="false" show-title="true" grow="100" margin="0.35714285714285715" position="start">
+                            <panel xmlns="https://geocortex.com/layout/v1" id="panel-d6fdb388" config="ad3c8d46-c89f-4868-8009-91deb0dd944b" active="false" slot="top-start" show-back-button="false" show-maximize-button="false" show-minimize-button="false" show-title="false">
+                                <query-builder xmlns="https://geocortex.com/layout/web/v1" id="query-builder-e436b118" config="aac275c4-d205-4180-8679-ce1a9134c93f" show-cancel-button="false"/>
+                            </panel>
+                            <panel xmlns="https://geocortex.com/layout/v1" id="panel-0b0bce78" config="8d4392e5-115b-4dda-8c57-7b983de617f3" active="false" show-back-button="false" show-maximize-button="false" show-minimize-button="false" show-title="false" show-close-button="true">
+                                <workflow id="workflow-c529d2b4" config="b4052b54-f01c-43b2-a473-28171a1e54b5" active="true"/>
+                            </panel>
+                            <panel xmlns="https://geocortex.com/layout/v1" id="panel-9b60fcfe" config="a3bebc3c-2974-4be4-a286-17ea2c083619" show-back-button="false" show-maximize-button="false" show-minimize-button="false" show-title="false">
+                                <feature-details id="feature-details-648c6589" config="a14b8be8-c718-4d08-ab5d-c2ad88b9c56c" active="false"/>
+                            </panel>
+                            <stack xmlns="https://geocortex.com/layout/v1" id="stack-874be1dd" config="9d19b510-db2e-429e-870f-7b2c5706a447" resizable="false">
+                                <stack id="stack-77d9be2a" config="d5e7f916-0725-49e7-9893-819864e63c3e" resizable="true">
+                                    <layer-list id="layer-list-4b81bf4d" config="54cb5941-7a0e-4a5a-9ee7-c649af81abb8" models="#map-4e8f424a" show-reorder-buttons="true" show-action-menu="true" show-filter-control="true"/>
+                                    <legend id="legend-a17d3323" config="b6a76aaf-a25b-4121-a94f-424de5ad579d" models="#map-4e8f424a"/>
+                                </stack>
+                            </stack>
+                            <stack xmlns="https://geocortex.com/layout/v1" id="stack-fcd0eef3" config="2ecf7482-69cd-4569-bcbb-5b2311b8d8c3">
+                                <bookmarks id="bookmarks-208dd69b" config="3792e215-6c9f-4c77-b906-eb4b5f458707"/>
+                            </stack>
+                            <print-form id="print-form-29d9e609" config="d7dd5fa8-6992-4a12-a960-8ef50f054d43" models="#map-4e8f424a" active="false"/>
+                        </tabs>
+                    </stack>
+                </panel>
+            </split>
+        </stack>
+    </split>
+</layout>
