@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns="https://geocortex.com/layout/v1" xmlns:custom="geofacta.gxw.topbar">
+    <custom:wdd-topbar config="wdd-topbar-config-1" />
+</layout>

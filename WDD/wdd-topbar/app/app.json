@@ -1,0 +1,22 @@
+{
+    "schemaVersion": "1.0",
+    "items": [
+        {
+            "id": "wdd-topbar-config-1",
+            "$type": "wdd-topbar",
+            "title": "Bovenbalk (huisstijl WDD)",
+            "hidden": false
+        },
+        {
+            "id": "viewer",
+            "version": "5.22.0",
+            "privacyPolicyInfo": "item://privacy/privacy-config",
+            "$type": "vertigis-web"
+        },
+        {
+            "id": "privacy-config",
+            "location": "app-footer",
+            "$type": "privacy"
+        }
+    ]
+}
