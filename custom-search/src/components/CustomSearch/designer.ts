@@ -13,16 +13,16 @@ import {
     getComponentModelDesignerSettingsSchema,
 } from "@vertigis/web/designer";
 
-import type TopBarModel from "./TopBarModel";
+import type CustomSearchModel from "./CustomSearchModel";
 
-export interface TopbarSettings extends ComponentModelDesignerSettings {
-    viewerTitle: string;
+export interface CustomSearchSettings extends ComponentModelDesignerSettings {
+    searchLayer1: string;
 }
 
-export type SettingsMap = DesignerSettings<TopbarSettings>;
+export type SettingsMap = DesignerSettings<CustomSearchSettings>;
 
 export const applySettings: ApplyDesignerSettingsCallback<
-    TopBarModel,
+    CustomSearchModel,
     SettingsMap
 > = async (args) => {
     const { model, settings } = args;
@@ -31,33 +31,33 @@ export const applySettings: ApplyDesignerSettingsCallback<
 };
 
 export const getSettings: GetDesignerSettingsCallback<
-    TopBarModel,
+    CustomSearchModel,
     SettingsMap
 > = async (args) => {
     const { model } = args;
-    const { viewerTitle} = model;
+    const { searchLayer1 } = model;
     return {
         ...(await getComponentModelDesignerSettings(args)),
-        viewerTitle
+        searchLayer1
     };
 };
 
 export const getSettingsSchema: GetDesignerSettingsSchemaCallback<
-    TopBarModel,
+    CustomSearchModel,
     SettingsMap
 > = async (args) => {
     const baseSchema = await getComponentModelDesignerSettingsSchema(args);
-    (baseSchema.settings[0].settings as Setting<TopbarSettings>[]) = (
-        baseSchema.settings[0].settings as Setting<TopbarSettings>[]
+    (baseSchema.settings[0].settings as Setting<CustomSearchSettings>[]) = (
+        baseSchema.settings[0].settings as Setting<CustomSearchSettings>[]
     ).concat([
         {
-            id: "viewerTitle",
+            id: "searchLayer1",
             type: "text",
-            description: "Naam van de viewer",
-            displayName: "Titel in bovenbalk",
+            description: "Zoeklaag 1",
+            displayName: "Zoeklaag 1",
         }
     ]);
-    const schema: SettingsSchema<TopbarSettings> = {
+    const schema: SettingsSchema<CustomSearchSettings> = {
         ...baseSchema,
         settings: [...baseSchema.settings],
     };

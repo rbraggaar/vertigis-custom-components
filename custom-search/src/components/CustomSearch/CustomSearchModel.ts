@@ -3,12 +3,12 @@ import type { ComponentModelProperties, PropertyDefs, } from "@vertigis/web/mode
 import { ComponentModelBase, serializable } from "@vertigis/web/models";
 import { inject, FrameworkServiceType } from "@vertigis/web/services";
 
-interface TopBarModelProperties extends ComponentModelProperties {
-    viewerTitle?: string;
+interface CustomSearchModelProperties extends ComponentModelProperties {
+    searchLayer1?: string;
 }
 
 @serializable
-export default class TopBarModel extends ComponentModelBase<TopBarModelProperties> {
+export default class CustomSearchModel extends ComponentModelBase<CustomSearchModelProperties> {
     /**
      * Service for accessing branding-related functionality and data.
      * 
@@ -17,19 +17,19 @@ export default class TopBarModel extends ComponentModelBase<TopBarModelPropertie
      */
     @inject(FrameworkServiceType.BRANDING)
     brandingService: BrandingService | undefined;
-    viewerTitle: string = "";
+    searchLayer1: string = "";
 
 
     // This method defines how the model will be serialized and deserialized into
     // an app item. Overrite it to include a new property.
-    protected override _getSerializableProperties(): PropertyDefs<TopBarModelProperties> {
+    protected override _getSerializableProperties(): PropertyDefs<CustomSearchModelProperties> {
         const props = super._getSerializableProperties();
 
         return {
             ...props,
-            viewerTitle: {
+            searchLayer1: {
                 serializeModes: ["initial"],
-                default: "",
+                default: "https://google.com",
             },
         };
     }

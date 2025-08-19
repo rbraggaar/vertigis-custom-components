@@ -6,7 +6,7 @@ const version = pkg.version;
 const outDir = path.join(__dirname, "build");
 const baseName = "main"; // Standard base name for the output file (VertiGIS)
 const srcFile = path.join(outDir, `${baseName}.js`);
-const destFile = path.join(outDir, `geofacta.gxw.topbar-${version}.js`);
+const destFile = path.join(outDir, `geofacta.gxw.custom-search-${version}.js`);
 
 if (fs.existsSync(srcFile)) {
     fs.renameSync(srcFile, destFile);

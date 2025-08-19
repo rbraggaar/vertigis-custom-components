@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns="https://geocortex.com/layout/v1" xmlns:custom="geofacta.gxw.custom-search">
+    <custom:custom-search config="custom-search-config-1" />
+</layout>
