@@ -29,7 +29,7 @@ export default class CustomSearchModel extends ComponentModelBase<CustomSearchMo
             ...props,
             searchLayer1: {
                 serializeModes: ["initial"],
-                default: "https://google.com",
+                default: "AI",
             },
         };
     }

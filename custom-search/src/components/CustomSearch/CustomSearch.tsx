@@ -26,7 +26,7 @@ const CustomSearch = (
     const { model } = props;
 
     const [searchInput, setSearchInput] = useState("");
-    const [searchSource, setSearchSource] = useState(model.searchLayer1 || "Adres, postcode of plaats");
+    const [searchSource, setSearchSource] = useState("Adres, postcode of plaats");
 
     useWatchAndRerender(model, "searchLayer1");
     /**
@@ -71,9 +71,10 @@ const CustomSearch = (
     }
 
     const handleSearchSubmit = (event) => {
+        console.log("Search submitted:", searchInput);
+
         event.preventDefault();
         // Handle the search submission here
-        console.log("Search submitted:", searchInput);
 
         getData(searchInput).catch((error) => {
             console.error("Error in getData:", error);
@@ -91,28 +92,37 @@ const CustomSearch = (
     return (
         <LayoutElement {...props} className="search-container">
             <div className="title-container">
-                <FormControl>
-                    <Input
-                        value={searchInput}
-                        onChange={handleChange}
-                        onBlur={handleSearchSubmit}
-                        onSubmit={handleSearchSubmit}
-                        id="input-controlled"
-                        placeholder={"Zoeken"}
-
-                    />
-                </FormControl>
-                <FormControl>
-                    <Select
-                        labelId="search-source-label"
-                        id="search-source"
-                        value={searchSource}
-                        onChange={handleSearchSourceChange}
-                    >
-                        <MenuItem value={"Adres, postcode of plaats"}>{"Adres, postcode of plaats"}</MenuItem>
-                        <MenuItem value={model.searchLayer1}>{model.searchLayer1}</MenuItem>
-                    </Select>
-                </FormControl>
+                <form
+                    onSubmit={handleSearchSubmit}
+                    className="title-container"
+                    style={{ display: "flex", flexDirection: "row", alignItems: "center" }}
+                >
+                    <FormControl>
+                        <Input
+                            type="text"
+                            id="input-controlled"
+                            placeholder={"Zoeken"}
+                            value={searchInput}
+                            onChange={handleChange}
+                            onKeyDown={e => {
+                                if (e.key === "Enter") {
+                                    handleSearchSubmit(e);
+                                }
+                            }}
+                        />
+                    </FormControl>
+                    <FormControl>
+                        <Select
+                            labelId="search-source-label"
+                            id="search-source"
+                            value={searchSource}
+                            onChange={handleSearchSourceChange}
+                        >
+                            <MenuItem value={"Adres, postcode of plaats"}>{"Adres, postcode of plaats"}</MenuItem>
+                            <MenuItem value={model.searchLayer1}>{model.searchLayer1}</MenuItem>
+                        </Select>
+                    </FormControl>
+                </form>
             </div>
             {/* <img onClick={async () => {
                 // zoom to initial viewpoint on clicking Dommel logo
