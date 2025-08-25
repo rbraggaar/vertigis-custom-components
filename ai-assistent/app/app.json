@@ -1,0 +1,144 @@
+{
+    "schemaVersion": "1.0",
+    "title": "Custom zoek functie test app",
+    "items": [
+        {
+            "id": "custom-search-config-1",
+            "$type": "custom-search",
+            "title": "Custom search component",
+            "hidden": false
+        },
+        {
+            "id": "viewer",
+            "version": "5.22.0",
+            "privacyPolicyInfo": "item://privacy/privacy-config",
+            "$type": "vertigis-web"
+        },
+        {
+            "id": "privacy-config",
+            "location": "app-footer",
+            "$type": "privacy"
+        },
+        {
+            "id": "esri-geocoder",
+            "taskSettings": {
+                "enableAdd": true,
+                "enableDelete": true,
+                "enableEditing": true,
+                "enableExport": true,
+                "enableIdentify": true,
+                "enableQuery": true,
+                "enableSearch": true,
+                "enableUpdate": true,
+                "studioSearchSubindexId": ""
+            },
+            "title": "language-designer-gen-geocoder-title",
+            "addressSchema": {
+                "fieldExtensions": [
+                    {
+                        "id": "702fec63-f59a-494f-8ec2-cbcfc2ef5db3",
+                        "field": {
+                            "$ref": "Address"
+                        },
+                        "formatSettings": {
+                            "dateFormat": null,
+                            "numberFormat": null
+                        }
+                    },
+                    {
+                        "id": "e9ceebaf-a1e9-4f11-b4c0-cf03f13bb0a5",
+                        "field": {
+                            "$ref": "Address2"
+                        },
+                        "formatSettings": {
+                            "dateFormat": null,
+                            "numberFormat": null
+                        }
+                    },
+                    {
+                        "id": "dd9e9903-8c0c-49c8-b4f1-99a1358265a8",
+                        "field": {
+                            "$ref": "Address3"
+                        },
+                        "formatSettings": {
+                            "dateFormat": null,
+                            "numberFormat": null
+                        }
+                    },
+                    {
+                        "id": "269d52a3-32db-4915-8f3c-5de26683699e",
+                        "field": {
+                            "$ref": "Neighborhood"
+                        },
+                        "formatSettings": {
+                            "dateFormat": null,
+                            "numberFormat": null
+                        }
+                    },
+                    {
+                        "id": "dbf7e3af-9ceb-4ad4-8de7-09266572988e",
+                        "field": {
+                            "$ref": "City"
+                        },
+                        "formatSettings": {
+                            "dateFormat": null,
+                            "numberFormat": null
+                        }
+                    },
+                    {
+                        "id": "d6f9ff14-05b8-4e4c-b1cd-3a7a87f1ffaf",
+                        "field": {
+                            "$ref": "Subregion"
+                        },
+                        "formatSettings": {
+                            "dateFormat": null,
+                            "numberFormat": null
+                        }
+                    },
+                    {
+                        "id": "51496c17-dd76-472d-bc2c-3ed762ace8d3",
+                        "field": {
+                            "$ref": "Region"
+                        },
+                        "formatSettings": {
+                            "dateFormat": null,
+                            "numberFormat": null
+                        }
+                    },
+                    {
+                        "id": "6c8b9280-d5b6-4dfe-b4e0-e922078a4d19",
+                        "field": {
+                            "$ref": "Postal"
+                        },
+                        "formatSettings": {
+                            "dateFormat": null,
+                            "numberFormat": null
+                        }
+                    },
+                    {
+                        "id": "40a195ef-0684-4086-92f9-23ec2e7fde99",
+                        "field": {
+                            "$ref": "PostalExt"
+                        },
+                        "formatSettings": {
+                            "dateFormat": null,
+                            "numberFormat": null
+                        }
+                    },
+                    {
+                        "id": "dd9e5239-9f5b-4ced-9b12-ece77e59b906",
+                        "field": {
+                            "$ref": "CountryCode"
+                        },
+                        "formatSettings": {
+                            "dateFormat": null,
+                            "numberFormat": null
+                        }
+                    }
+                ]
+            },
+            "url": "https://geocoder.arcgisonline.nl/arcgis/rest/services/Geocoder_NL_RD/GeocodeServer",
+            "$type": "geocoder"
+        }
+    ]
+}
